@@ -1,12 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UserName } from '../../models/username';
 import { UserNameEdit } from '../../models/usernameedit';
+import { stringify } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-user-name',
   templateUrl: './user-name.component.html',
   styleUrls: ['./user-name.component.css']
 })
+
 export class UserNameComponent implements OnInit {
   userName:UserName;
   editUserName: UserNameEdit;
@@ -35,12 +37,15 @@ export class UserNameComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    let firstNameInput = document.getElementById('#firstNameInput');
+
     this.userName = {
         firstName: 'Max',
         secondName: 'Cramer'
     },
+
     this.editUserName = {
-        firstName: 'Name',
+        firstName: stringify(new String(firstNameInput)),
         secondName: 'Surname'
     }
   }
