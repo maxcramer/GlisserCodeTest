@@ -2,7 +2,7 @@
   <h3 (click)="toggle()">{{userName.firstName}} {{ userName.secondName }}</h3>
   <div *ngIf="show">
     <div class="name-input">
-      <button>X</button>
+      <button (click)="toggle()">X</button>
       <input type="text">
       <input type="text">
       <button>Save New Name</button>

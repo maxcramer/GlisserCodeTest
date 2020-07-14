@@ -2,7 +2,7 @@
   <p (click)="toggle()">{{ userInfo.bio }}</p>
   <div *ngIf="show">
     <div>
-      <button>X</button>
+      <button (click)="toggle()">X</button>
       <input type="text">
       <button>Save New Bio</button>
     </div>
