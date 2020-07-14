@@ -24,30 +24,25 @@ export class UserNameComponent implements OnInit {
     this.show = !this.show;
   }
 
-
   changeName() {
-    let firstNameInput = document.getElementById('#firstNameInput');
+    const firstNameInput = (<HTMLInputElement>document.getElementById('firstNameInput'));
+    const secondNameInput = (<HTMLInputElement>document.getElementById('secondNameInput'));
 
-    this.userName = this.editUserName;
+    this.userName = {
+      firstName: firstNameInput.value,
+      secondName: secondNameInput.value
+    }
+
     this.toggle();
-    console.log(this.userName);
-    console.log(firstNameInput)
   }
 
   constructor() {
-
-   }
-
-  ngOnInit() {
     this.userName = {
-        firstName: 'Max',
-        secondName: 'Cramer'
-    },
-
-    this.editUserName = {
-        firstName: 'firstname',
-        secondName: 'Surname'
-
+      firstName: 'Max',
+      secondName: 'Cramer'
     }
   }
+
+  ngOnInit() {}
+
 }
