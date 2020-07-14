@@ -7,7 +7,7 @@ import { UserName } from '../../models/username';
   styleUrls: ['./user-name.component.css']
 })
 export class UserNameComponent implements OnInit {
-  userName:UserName[];
+  userName:UserName{};
   public show:boolean = false;
   public firstName: any = 'Show';
   public secondName: any = 'Show';
@@ -25,8 +25,8 @@ export class UserNameComponent implements OnInit {
   }
 
   changeName() {
-    this.firstName = this.firstName;
-    this.secondName = this.secondName;
+    this.firstName = this.firstName.value;
+    this.secondName = this.secondName.value;
     this.toggle();
     console.log(this.userName);
   }
@@ -34,13 +34,13 @@ export class UserNameComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.userName = [
-      {
+    this.userName = {
         firstName: 'Max',
-        secondName: 'Cramer',
-        completed: false
-      }
-    ]
+        secondName: 'Cramer'
+    },
+    this.userNameEdit = {
+        firstName: 'Max',
+        secondName: 'Cramer'
+    }
   }
-
 }
