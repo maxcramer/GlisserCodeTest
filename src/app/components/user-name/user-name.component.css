@@ -19,9 +19,7 @@
 }
 
 .name-input-parent {
-  /* z-index: 200; */
-  background-color: grey;
-  opacity: 0.5;
+  backdrop-filter: blur(1px);
   width: 617px;
   height: 23rem;
   margin-left: -23px;
@@ -32,7 +30,7 @@
 .name-input {
   z-index: 200;
   position: absolute;
-  background-color: #464650;
+  background-color: #616370;
   top: 8%;
   left: 37.5%;
   width: 300px;
