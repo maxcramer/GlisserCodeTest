@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UserName } from '../../models/username';
-import { UserNameEdit } from '../../models/usernameedit';
 import { stringify } from '@angular/compiler/src/util';
 
 @Component({
@@ -13,7 +12,6 @@ import { stringify } from '@angular/compiler/src/util';
 
 export class UserNameComponent implements OnInit {
   userName:UserName;
-  editUserName: UserNameEdit;
   public show:boolean = false;
 
   logForm(value: any) {
