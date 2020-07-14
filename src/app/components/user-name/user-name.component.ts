@@ -24,10 +24,10 @@ export class UserNameComponent implements OnInit {
     }
   }
 
-  changeName(userName) {
-    this.firstName = userName.firstName;
-    this.secondName = userName.secondName;
-    console.log(this.firstName, this.secondName);
+  changeName() {
+    this.firstName = this.firstName;
+    this.secondName = this.secondName;
+    console.log(this.userName);
   }
 
   constructor() { }
