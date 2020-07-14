@@ -27,6 +27,7 @@ export class UserNameComponent implements OnInit {
   changeName() {
     this.firstName = this.firstName;
     this.secondName = this.secondName;
+    this.toggle();
     console.log(this.userName);
   }
 
