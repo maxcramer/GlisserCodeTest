@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UserName, UserNameEdit } from '../../models/username';
+import { UserName } from '../../models/username';
+import { UserNameEdit } from '../../models/usernameedit';
 
 @Component({
   selector: 'app-user-name',
@@ -8,7 +9,7 @@ import { UserName, UserNameEdit } from '../../models/username';
 })
 export class UserNameComponent implements OnInit {
   userName:UserName[];
-  editUserName: EditUserName[];
+  editUserName: UserNameEdit[];
   public show:boolean = false;
   public firstName: any = 'Show';
   public secondName: any = 'Show';
@@ -26,8 +27,7 @@ export class UserNameComponent implements OnInit {
   }
 
   changeName() {
-    this.firstName = this.firstName.value;
-    this.secondName = this.secondName.value;
+    this.userName = this.editUserName;
     this.toggle();
     console.log(this.userName);
   }
@@ -39,14 +39,12 @@ export class UserNameComponent implements OnInit {
       {
         firstName: 'Max',
         secondName: 'Cramer',
-        completed: false
       }
     ],
-    this.userNameEdit = [
+    this.editUserName = [
       {
-        firstName: 'Frank',
-        secondName: 'Bonnoville',
-        completed: true
+        firstName: 'First Name',
+        secondName: 'Second Name',
       }
     ]
   }
