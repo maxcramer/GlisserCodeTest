@@ -16,9 +16,11 @@ export class UserNameComponent implements OnInit {
     this.show = !this.show;
 
     if(this.show) {
-      this.firstName = ""
+      this.firstName = "",
+      this.secondName = ""
     } else {
-      this.firstName = "";
+      this.firstName = "Show",
+      this.secondName = "Show"
     }
   }
 
