@@ -8,8 +8,8 @@ import { UserNameEdit } from '../../models/usernameedit';
   styleUrls: ['./user-name.component.css']
 })
 export class UserNameComponent implements OnInit {
-  userName:UserName[];
-  editUserName: UserNameEdit[];
+  userName:UserName;
+  editUserName: UserNameEdit;
   public show:boolean = false;
   public firstName: any = 'Show';
   public secondName: any = 'Show';
@@ -35,17 +35,13 @@ export class UserNameComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.userName = [
-      {
+    this.userName = {
         firstName: 'Max',
-        secondName: 'Cramer',
-      }
-    ],
-    this.editUserName = [
-      {
-        firstName: 'First Name',
-        secondName: 'Second Name',
-      }
-    ]
+        secondName: 'Cramer'
+    },
+    this.editUserName = {
+        firstName: 'Frankie',
+        secondName: 'uckoffF'
+    }
   }
 }
