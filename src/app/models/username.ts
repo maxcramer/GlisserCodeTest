@@ -3,3 +3,9 @@ export class UserName {
   secondName: string;
   completed: boolean;
 }
+
+export class UserNameEdit {
+  firstName: string;
+  secondName: string;
+  completed: boolean;
+}

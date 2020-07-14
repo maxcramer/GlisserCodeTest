@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UserName } from '../../models/username';
+import { UserName, UserNameEdit } from '../../models/username';
 
 @Component({
   selector: 'app-user-name',
@@ -7,7 +7,8 @@ import { UserName } from '../../models/username';
   styleUrls: ['./user-name.component.css']
 })
 export class UserNameComponent implements OnInit {
-  userName:UserName{};
+  userName:UserName[];
+  editUserName: EditUserName[];
   public show:boolean = false;
   public firstName: any = 'Show';
   public secondName: any = 'Show';
@@ -34,13 +35,19 @@ export class UserNameComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.userName = {
+    this.userName = [
+      {
         firstName: 'Max',
-        secondName: 'Cramer'
-    },
-    this.userNameEdit = {
-        firstName: 'Max',
-        secondName: 'Cramer'
-    }
+        secondName: 'Cramer',
+        completed: false
+      }
+    ],
+    this.userNameEdit = [
+      {
+        firstName: 'Frank',
+        secondName: 'Bonnoville',
+        completed: true
+      }
+    ]
   }
 }
