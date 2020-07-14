@@ -3,8 +3,15 @@
   <div *ngIf="show">
     <div class="name-input">
       <button (click)="toggle()">X</button>
-      <input type="text" [(ngModel)]="firstName">
-      <input type="text" [(ngModel)]="secondName">
+      <h3>Edit your details</h3>
+      <div>
+        <h5>first name</h5>
+        <input type="text" [(ngModel)]="userName.firstName">
+      </div>
+      <div>
+         <h5>last name</h5>
+        <input type="text" [(ngModel)]="userName.secondName">
+      </div>
       <button type="submit" (click)="changeName()" id="name-button">Save New Name</button>
     </div>
   </div>
