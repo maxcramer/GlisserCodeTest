@@ -1,3 +1,19 @@
 #username {
   cursor: pointer;
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+.profile-pic {
+  height: 60px;
+  width: 60px;
+  border-radius: 160px;
+  margin-right: 25px;
+}
+
+.title-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2.5rem;
 }

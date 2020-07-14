@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserName } from '../../models/username';
-import { stringify } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-user-name',

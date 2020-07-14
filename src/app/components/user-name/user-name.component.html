@@ -1,5 +1,9 @@
 <form #form="ngForm" (submit)="logForm(form.value)">
-  <h3 id="username" (click)="toggle()">{{userName.firstName}} {{ userName.secondName }}</h3>
+  <div class="title-img">
+    <img class="profile-pic" src="https://www.marismith.com/wp-content/uploads/2014/07/facebook-profile-blank-face.jpeg" alt="profile image">
+    <h3 id="username" (click)="toggle()">{{userName.firstName}} {{ userName.secondName }}</h3>
+  </div>
+
   <div *ngIf="show">
     <div class="name-input">
       <button (click)="toggle()">X</button>

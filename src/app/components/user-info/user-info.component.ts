@@ -7,27 +7,35 @@ import { UserInfo } from '../../models/userinfo';
   styleUrls: ['./user-info.component.css']
 })
 export class UserInfoComponent implements OnInit {
-  userInfo:UserInfo[];
+  userInfo:UserInfo;
   public show:boolean = false;
-  public bio: any = 'Show';
+
+  logForm(value: any) {
+    console.log(value);
+  }
 
   toggle() {
     this.show = !this.show;
+  }
 
-    if(this.show) {
-      this.bio = "Hide"
-    } else {
-      this.bio = "Show";
+  changeBio() {
+    const bioInput = (<HTMLInputElement>document.getElementById('bioInput'));
+
+    this.userInfo = {
+      bio: bioInput.value
     }
-  }
-  constructor() { }
 
-  ngOnInit() {
-    this.userInfo = [
-      {
-        bio: 'Bacon ipsum dolor amet pork aute ullamco, brisket pork chop ut hamburger ut. Id chislic buffalo corned beef pig. Short ribs strip steak porchetta sunt laboris short loin meatloaf magna eu deserunt veniam bacon proident. Turkey in proident voluptate incididunt ribeye exercitation esse shank. Chuck aliquip consectetur alcatra buffalo. In dolor tail, labore pastrami sirloin eiusmod ut nulla tenderloin filet mignon officia fatback. Commodo exercitation dolore tenderloin.'
-      }
-    ]
+    this.toggle();
   }
+
+
+
+  constructor() {
+    this.userInfo = {
+      bio: 'Bacon ipsum dolor amet flank culpa ex, quis commodo ea pork belly ham bacon incididunt landjaeger pig laborum ut. Velit aliquip minim duis do laboris ut ball tip tenderloin ad. Consectetur pork capicola occaecat esse tempor mollit. In burgdoggen exercitation, ground round ut chuck pig voluptate. Chicken ribeye dolore porchetta aliqua salami in cupim flank turkey pancetta. Jerky filet mignon capicola turkey enim sint nostrud magna leberkas ex biltong. Tenderloin beef ribs cow pork belly cupim pork.'
+    }
+   }
+
+  ngOnInit() {}
 
 }
