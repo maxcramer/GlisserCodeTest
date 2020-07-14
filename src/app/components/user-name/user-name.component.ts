@@ -16,10 +16,16 @@ export class UserNameComponent implements OnInit {
     this.show = !this.show;
 
     if(this.show) {
-      this.firstName = "Hide"
+      this.firstName = ""
     } else {
-      this.firstName = "Show";
+      this.firstName = "";
     }
+  }
+
+  changeName() {
+    this.firstName = this.firstName;
+    this.secondName = this.secondName;
+    console.log(this.firstName, this.secondName);
   }
 
   constructor() { }
