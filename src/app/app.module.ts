@@ -5,14 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserNameComponent } from './components/user-name/user-name.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
-import { UsernameInputComponent } from './components/username-input/username-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserNameComponent,
     UserInfoComponent,
-    UsernameInputComponent
   ],
   imports: [
     BrowserModule,

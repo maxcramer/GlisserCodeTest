@@ -1,4 +1,12 @@
 <div *ngFor="let userName of userName">
-  <h3>{{userName.firstName}} {{ userName.secondName }}</h3>
+  <h3 (click)="toggle()">{{userName.firstName}} {{ userName.secondName }}</h3>
+  <div *ngIf="show">
+    <div class="name-input">
+      <button>X</button>
+      <input type="text">
+      <input type="text">
+      <button>Save New Name</button>
+    </div>
+  </div>
 </div>
 

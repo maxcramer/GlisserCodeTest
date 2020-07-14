@@ -8,6 +8,19 @@ import { UserName } from '../../models/username';
 })
 export class UserNameComponent implements OnInit {
   userName:UserName[];
+  public show:boolean = false;
+  public firstName: any = 'Show';
+  public secondName: any = 'Show';
+
+  toggle() {
+    this.show = !this.show;
+
+    if(this.show) {
+      this.firstName = "Hide"
+    } else {
+      this.firstName = "Show";
+    }
+  }
 
   constructor() { }
 
