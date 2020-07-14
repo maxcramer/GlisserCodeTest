@@ -9,44 +9,45 @@ import { stringify } from '@angular/compiler/src/util';
   styleUrls: ['./user-name.component.css']
 })
 
+
+
 export class UserNameComponent implements OnInit {
   userName:UserName;
   editUserName: UserNameEdit;
   public show:boolean = false;
-  public firstName: any = 'Show';
-  public secondName: any = 'Show';
+
+  logForm(value: any) {
+    console.log("This is the form value", value);
+  }
 
   toggle() {
     this.show = !this.show;
-
-    if(this.show) {
-      this.firstName = "",
-      this.secondName = ""
-    } else {
-      this.firstName = "Show",
-      this.secondName = "Show"
-    }
   }
 
+
   changeName() {
+    let firstNameInput = document.getElementById('#firstNameInput');
+
     this.userName = this.editUserName;
     this.toggle();
     console.log(this.userName);
+    console.log(firstNameInput)
   }
 
-  constructor() { }
+  constructor() {
+
+   }
 
   ngOnInit() {
-    let firstNameInput = document.getElementById('#firstNameInput');
-
     this.userName = {
         firstName: 'Max',
         secondName: 'Cramer'
     },
 
     this.editUserName = {
-        firstName: stringify(new String(firstNameInput)),
+        firstName: 'firstname',
         secondName: 'Surname'
+
     }
   }
 }
