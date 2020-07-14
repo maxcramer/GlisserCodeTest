@@ -40,8 +40,8 @@ export class UserNameComponent implements OnInit {
         secondName: 'Cramer'
     },
     this.editUserName = {
-        firstName: 'Frankie',
-        secondName: 'uckoffF'
+        firstName: 'Name',
+        secondName: 'Surname'
     }
   }
 }
