@@ -8,7 +8,18 @@ import { UserInfo } from '../../models/userinfo';
 })
 export class UserInfoComponent implements OnInit {
   userInfo:UserInfo[];
+  public show:boolean = false;
+  public bio: any = 'Show';
 
+  toggle() {
+    this.show = !this.show;
+
+    if(this.show) {
+      this.bio = "Hide"
+    } else {
+      this.bio = "Show";
+    }
+  }
   constructor() { }
 
   ngOnInit() {
