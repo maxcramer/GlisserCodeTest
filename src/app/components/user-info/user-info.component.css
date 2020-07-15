@@ -23,7 +23,7 @@
   z-index: 200;
   position: absolute;
   background-color: #616370;
-  top: 16%;
+  top: 18%;
   left: 18%;
   width: 375px;
   height: 13rem;
@@ -60,4 +60,17 @@
   border-radius: 3px;
   margin: 1px;
   padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#bio-button {
+  float: right;
+  margin-top: 7px;
+  background-color: #464650;
+  color: white;
+  border: none;
+  height: 25px;
+  width: 105px;
+  border-radius: 3px;
+  cursor: pointer;
 }
