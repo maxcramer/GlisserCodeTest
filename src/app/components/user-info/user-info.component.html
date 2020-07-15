@@ -2,10 +2,12 @@
   <h3 class="bio-title">My Bio</h3>
   <p class="bio" (click)="toggle()">{{ userInfo.bio }}</p>
   <div *ngIf="show">
-    <div>
-      <button (click)="toggle()">X</button>
-      <input type="text" value={{userInfo.bio}} placeholder="bio" id="bioInput">
-      <button type="submit" (click)="changeBio()" id="bio-button">Save New Bio</button>
+    <div class="bio-input-parent">
+      <div class="bio-input">
+        <button (click)="toggle()">X</button>
+        <input type="text" value={{userInfo.bio}} placeholder="bio" id="bioInput">
+        <button type="submit" (click)="changeBio()" id="bio-button">Save New Bio</button>
+      </div>
     </div>
   </div>
 </form>

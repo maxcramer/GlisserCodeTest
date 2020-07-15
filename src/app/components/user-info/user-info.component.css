@@ -8,3 +8,23 @@
   font-size: 20px;
   font-weight: lighter;
 }
+
+.bio-input-parent {
+  backdrop-filter: blur(1px);
+  width: 671px;
+  height: 23rem;
+  margin-left: -23px;
+  margin-top: -143px;
+  position: absolute;
+}
+
+.bio-input {
+  z-index: 200;
+  background-color: #616370;
+  top: 9%;
+  left: 36%;
+  width: 375px;
+  height: 13rem;
+  padding: 1rem;
+  box-shadow: 0 2px 7px black;
+}
