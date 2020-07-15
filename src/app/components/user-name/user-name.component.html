@@ -8,17 +8,19 @@
     <div class="name-input-parent">
     </div>
       <div class="name-input">
-        <button (click)="toggle()">X</button>
-        <h3>Edit your details</h3>
-        <div>
-          <h5>first name</h5>
+        <div class="exit-btn-and-title">
+          <button class="x-button-name" (click)="toggle()">X</button>
+          <h3 class="edit-name-title">Edit your details</h3>
+        </div>
+        <div class="firstName">
+          <h5 class="name-title">first name</h5>
           <input type="text" value="{{userName.firstName}}" placeholder="first name" id="firstNameInput">
         </div>
-        <div>
-           <h5>last name</h5>
+        <div class="secondName">
+           <h5 class="name-title">last name</h5>
           <input type="text" value="{{userName.secondName}}" placeholder="last name" id="secondNameInput">
         </div>
-        <button type="submit" (click)="changeName()" id="name-button">Save New Name</button>
+        <button type="submit" (click)="changeName()" id="name-button">OK</button>
       </div>
   </div>
 </form>
