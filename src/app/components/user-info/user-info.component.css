@@ -50,3 +50,14 @@
   border-style: none;
   cursor: pointer;
 }
+
+#bioInput {
+  height: 113px;
+  width: 94%;
+  background-color: #464650;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin: 1px;
+  padding: 10px;
+}

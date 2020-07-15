@@ -8,7 +8,7 @@
           <h3 class="edit-bio-title">Edit your bio</h3>
           <button class="x-button-bio" (click)="toggle()">X</button>
         </div>
-        <input type="text" value={{userInfo.bio}} placeholder="bio" id="bioInput">
+        <textarea cols="30" rows="10" type="text" value={{userInfo.bio}} placeholder="bio" id="bioInput"></textarea>
         <button type="submit" (click)="changeBio()" id="bio-button">Save New Bio</button>
       </div>
     </div>
