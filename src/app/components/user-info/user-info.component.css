@@ -30,3 +30,23 @@
   padding: 1rem;
   box-shadow: 0 2px 7px black;
 }
+
+.exit-button-and-bio-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 21px;
+  margin-bottom: 20px;
+}
+
+.edit-bio-title {
+  font-weight: 100;
+}
+
+.x-button-bio {
+  color: white;
+  background-color: #616370;
+  border-style: none;
+  cursor: pointer;
+}

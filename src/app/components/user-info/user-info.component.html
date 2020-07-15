@@ -4,7 +4,10 @@
   <div *ngIf="show">
     <div class="bio-input-parent">
       <div class="bio-input">
-        <button (click)="toggle()">X</button>
+        <div class="exit-button-and-bio-title">
+          <h3 class="edit-bio-title">Edit your bio</h3>
+          <button class="x-button-bio" (click)="toggle()">X</button>
+        </div>
         <input type="text" value={{userInfo.bio}} placeholder="bio" id="bioInput">
         <button type="submit" (click)="changeBio()" id="bio-button">Save New Bio</button>
       </div>
